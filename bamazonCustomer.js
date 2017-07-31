@@ -7,7 +7,8 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  database: "bamazon"
+  database: "bamazon",
+  password: "dagNASTY77"
 });
 
 // connect to the mysql server and sql database
@@ -67,6 +68,7 @@ function start() {
             function(error) {
               if(error) throw err;
               console.log("Thank you for your purchase!");
+              console.log("Your total order was " (answer.quantity * chosenItem.price));
               start();
             }
           );
